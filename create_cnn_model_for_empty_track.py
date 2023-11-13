@@ -81,11 +81,13 @@ model_name= path+name+'.h5'
 model_name ="D:/Projects/pythonProject/detector_for_industry/cnn1.h5"
 cnn.save(model_name)
 
-
+#load model
 model_name ="D:/Projects/pythonProject/detector_for_industry/cnn1.h5"
 #detection using model
 model = tf.keras.models.load_model(model_name)
 
+
+#following script is used for tesing
 def detect_obj(image):
     #test_image_conv = image.img_to_array(test_image)
     test_image = cv2.resize(image, (64, 64))
